@@ -27,9 +27,9 @@ class App extends Component {
     
     <WelcomeText>Contactos</WelcomeText>
     <InputContainer>
-      <Input type="Text" placeholder="Pesquisar contacto" />
-            <ContactsContainer>{this.state.map.response}</ContactsContainer>
+      <Input type="Text" placeholder="Pesquisar contacto" />            
     </InputContainer>
+            <ContactsContainer>{this.state.map.response}</ContactsContainer>
   </MainContainer>
 
 }
@@ -111,6 +111,18 @@ justify-content: space-around;
 align-items: center;
 height: 20%;
 width: 100%;
+
+`;
+
+const ContactsContainer = styled.div`
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+height: 20%;
+width: 100%;
+box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
 
 `;
 
