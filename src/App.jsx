@@ -28,6 +28,7 @@ class App extends Component {
     <WelcomeText>Contactos</WelcomeText>
     <InputContainer>
       <Input type="Text" placeholder="Pesquisar contacto" />
+            <ContactsContainer>{this.state.map.response}</ContactsContainer>
     </InputContainer>
   </MainContainer>
 
