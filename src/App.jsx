@@ -29,7 +29,7 @@ class App extends Component {
     <InputContainer>
       <Input type="Text" placeholder="Pesquisar contacto" />            
     </InputContainer>
-            <ContactsContainer>{this.state.map.response}</ContactsContainer>
+            <ContactsContainer>{this.state.response}</ContactsContainer>
   </MainContainer>
 
 }
