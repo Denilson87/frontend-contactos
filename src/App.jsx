@@ -3,9 +3,27 @@ import Input from "./components/Input";
 import Button from "./components/Button";
 import Icon from "./components/Icon";
 
-function App() {
+class App extends Component {
+  state = {
+    response: ''
+  };
 
-  return <MainContainer>
+  componentDidMount() {
+    this.callApi()
+      .then(res => this.setState({ response: res.express }))
+      .catch(err => console.log(err));
+  }
+
+  callApi = async () => {
+    const response = await fetch('/contactos');
+    const body = await response.json();
+    if (response.status !== 200) throw Error(body.message);
+
+    return body;
+  };
+
+  render() {
+    return ( <MainContainer>
     
     <WelcomeText>Contactos</WelcomeText>
     <InputContainer>
